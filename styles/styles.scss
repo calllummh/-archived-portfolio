@@ -1,14 +1,22 @@
-
-  
-  .centrelogo {
+@import "./variables";
+@mixin flexCentre{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+// @inherit
+
+body {
+    background-color: $bg;
+}
+
+.centrelogo {
+    @include flexCentre();
     max-width: 100%;
     height: auto;
-  }
+}
   
-  .name {
+.name {
     margin-top: 0%;
     margin-left: 1%;
     position: absolute;
@@ -16,36 +24,34 @@
     left: 1%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
-    color: white;
-  }
+    color: $textcolour;
+    h3 {
+        color: $textcolour;
+        :hover {
+            color: #5d6b62;
+        }
+    }
+}
   
-  .name h3 {
-    color: white;
-  }
-  
-  .name h3:hover {
-    color: #5d6b62;
-  }
-  
-  a:link {
-    text-decoration: none;
-    color: #ffffff;
-  }
-  
-  a:visited {
-    text-decoration: none;
-    color: #ffffff;
-  }
-  
-  a:hover {
-    text-decoration: none;
-    color: #5d6b62;
-  }
-  
-  a:active {
-    text-decoration: none;
-    color: #5d6b62;
-  }
+a{
+    :link {
+        text-decoration: none;
+        color: $textcolour;
+      }
+    :visited {
+        text-decoration: none;
+        color: $textcolour;
+    }
+    :hover {
+        text-decoration: none;
+        color: #5d6b62;
+      }
+    :active {
+        text-decoration: none;
+        color: #5d6b62;
+    }
+}
+
   
   .namefront {
     margin-top: 0%;
@@ -61,7 +67,7 @@
     font-family: Arial, Helvetica, sans-serif;
     /* font-weight: bold; */
     font-size: medium;
-    color: #ffffff;
+    color: $textcolour;
     margin-top: 5%;
     text-align: center;
     /* font-weight: bold;
@@ -69,32 +75,28 @@
      */
     font-style: italic;
     font-weight: bold;
+    h2 {
+        display: inline-block;
+      }
   }
-  
-  .subtitles h2 {
-    display: inline-block;
-  }
-  
   .logo {
     display: inline-block;
+    :hover {
+        cursor: pointer;
+        background-image: url("logogreenspin.gif");
+        margin: 1%;
+        /* width: 5%; */
+      }
   }
   
-  .logo:hover {
-    cursor: pointer;
-    background-image: url("logogreenspin.gif");
-    margin: 1%;
-    /* width: 5%; */
-  }
-  
-  /* <a href="front page.html"><img style="cursor:pointer" width="1%" style="margin: 1%;" class="overlay pull-right" src="logogreenspin.gif"></a> */
   #about {
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
-    color: #ffffff;
+    color: $textcolour;
     margin-left: 1%;
     /* (A) TURN INTO A BOX */
     padding: 10px;
-    color: #ffffff;
+    color: $textcolour;
     font-weight: bold;
     /* (B) HIDDEN BY DEFAULT */
     /* OUT OF SCREEN - SET THE POSITION AS YOU WISH */
@@ -104,18 +106,17 @@
     /* (C) CSS ANIMATION */
     transition: all 0.5s;
     visibility: hidden;
-  }
-  
-  #about.show {
-    left: 5px;
-    visibility: visible;
+    .show {
+        left: 5px;
+        visibility: visible;
+      }
   }
   
   .bigsubtitle {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
     font-size: 350%;
-    color: #ffffff;
+    color: $textcolour;
     font-style: italic;
     font-weight: bold;
     /* margin-top: 8%; */
@@ -128,28 +129,25 @@
     -moz-column-gap: 50px;
          column-gap: 50px;
     margin-left: 2%;
-  }
-  
-  .years p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-    font-size: 200%;
-    color: #ffffff;
-    font-style: italic;
-  }
-  
-  .years img {
-    max-width: 300px;
-    max-height: 300px;
-    cursor: pointer;
-  }
-  
-  .years words {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    font-size: 50%;
-    color: #ffffff;
-    font-style: normal;
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: lighter;
+        font-size: 200%;
+        color: $textcolour;
+        font-style: italic;
+      }
+    img {
+        max-width: 300px;
+        max-height: 300px;
+        cursor: pointer;
+    }
+    words {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 300;
+        font-size: 50%;
+        color: $textcolour;
+        font-style: normal;
+    }
   }
   
   .image-list {
@@ -158,54 +156,49 @@
     text-align: center;
     max-width: 1500px;
     padding: 0;
+    // photo
+    li {
+        display: inline-block;
+        width: 450px;
+        margin: 0 5px 30px;
+        a {
+            display: block;
+            text-decoration: none;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 354.44px;
+            margin: 0;
+            margin-top: 20px;
+            padding: 0;
+            border-radius: 5px;
+          }
+    }
+    // title
+    .details {
+        margin-top: 15px;
+        h3 {
+            display: block;
+            font-size: 20px;
+            margin: 0 0 3px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-weight: bold;
+            a {
+                color: $textcolour;
+                text-decoration: none;
+              }
+          }
+        .image-date {
+            display: block;
+            color: $textcolour;
+            font-size: 15px;
+            font-weight: normal;
+            margin: 0;
+        }
+      }
   }
-  
-  .image-list li {
-    display: inline-block;
-    width: 450px;
-    margin: 0 5px 30px;
-  }
-  
-  /* Photo */
-  .image-list li > a {
-    display: block;
-    text-decoration: none;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 354.44px;
-    margin: 0;
-    margin-top: 20px;
-    padding: 0;
-    border-radius: 5px;
-  }
-  
-  .image-list .details {
-    margin-top: 15px;
-  }
-  
-  /* Title */
-  .image-list .details h3 {
-    display: block;
-    font-size: 20px;
-    margin: 0 0 3px 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-weight: bold;
-  }
-  
-  .image-list .details h3 a {
-    color: #ffffff;
-    text-decoration: none;
-  }
-  
-  .image-list .details .image-date {
-    display: block;
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: normal;
-    margin: 0;
-  }
+
   
   hr {
     width: 96%;
@@ -213,7 +206,7 @@
     margin-left: 2%;
     margin-right: 2%;
     margin-top: 3%;
-    background-color: #ffffff;
+    background-color: $textcolour;
   }
   
   /* menu section */
@@ -239,26 +232,24 @@
     text-align: center;
     font-style: italic;
     padding: 1rem;
-    color: #ffffff;
+    color: $textcolour;
     cursor: pointer;
     border-radius: 7px;
     transition: all 0.25s ease-out;
-  }
-  
-  .lbl-toggle:hover {
-    color: #ffffff;
-  }
-  
-  .lbl-toggle::before {
-    content: " ";
-    display: inline-block;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid currentColor;
-    vertical-align: middle;
-    margin-right: 0.7rem;
-    transform: translateY(-2px);
-    transition: transform 0.2s ease-out;
+    :hover {
+        color: $textcolour;
+      }
+    ::before {
+        content: " ";
+        display: inline-block;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 5px solid currentColor;
+        vertical-align: middle;
+        margin-right: 0.7rem;
+        transform: translateY(-2px);
+        transition: transform 0.2s ease-out;
+    }
   }
   
   .toggle:checked + .lbl-toggle::before {
@@ -294,25 +285,40 @@
   .btn {
     /* margin-top: 3%; */
     margin-left: 2%;
-    background-color: white;
-  }
-  
-  .btn:hover {
-    background-color: white;
+    background-color: $textcolour;
+    :hover {
+        background-color: $textcolour;
+      }
   }
   
   p a {
-    color: white;
+    color: $textcolour;
     font-family: Arial, Helvetica, sans-serif;
   }
-  
-  /* 
-  color: #ffffff; font-family: Arial, Helvetica, sans-serif; */
-  /* .navbar-brand {
-    width:1000px;
-    font-size: 24px;
+
+  h1 {
+    font-family: 'Helvetica';
+      font-size: 4em;
+      color: $text-color;
   }
-  .navbar-brand logo img {
-    height: 20px;
-    float: right;
-  } *//*# sourceMappingURL=styles.css.map */
+  // Typing style
+  .typing {
+    position: relative;
+      &::after {
+      content: "|";
+      position: absolute;
+      right: 0;
+      width: 100%;
+      color: $caret-color;
+      background: $bg;
+      animation: typing $animation-time steps($text-length) forwards,
+        caret 1s infinite;
+    }
+  }
+  // Animation
+  @keyframes typing {
+      to { width: 0 }
+  }
+  @keyframes caret {
+      50% { color: transparent }
+  }
