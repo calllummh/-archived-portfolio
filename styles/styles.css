@@ -130,6 +130,13 @@ a :active {
 #contactme p :hover {
   color: #5C6C63;
 }
+#contactme h3 {
+  margin-top: -6px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  color: #ffffff;
+}
 
 #cv {
   display: block;
