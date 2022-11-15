@@ -1,319 +1,232 @@
 @import "./variables";
 @mixin flexCentre{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-/* @inherit */
+/* @inherit may be useful*/
+
+// front page logo
 .centrelogo {
-    @include flexCentre();
-    max-width: 100%;
-    height: auto;
+  @include flexCentre();
+  max-width: 100%;
+  height: auto;
+  top:30%;
 }
 
-.name{
-    margin-top: 0%;
-    margin-left: 1%;
-    position: absolute;
-    top: 0%;
-    left: 1%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
-    color: $text-colour;
-    h3 {
-        color: $text-colour;
-        :hover{
-            color: #5d6b62;
-        }
-    }
-}
-  
-a{
-    :link {
-        text-decoration: none;
-        color: $text-colour;
-      }
-    :visited {
-        text-decoration: none;
-        color: $text-colour;
-    }
-    :hover {
-        text-decoration: none;
-        color: #5d6b62;
-      }
-    :active {
-        text-decoration: none;
-        color: #5d6b62;
-    }
-}
-
-  
-  .namefront {
-    margin-top: 0%;
-    margin-left: 1%;
-    position: absolute;
-    top: 53%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: medium;
-  }
-  
-  .subtitles {
-    font-family: Arial, Helvetica, sans-serif;
-    /* font-weight: bold; */
-    font-size: medium;
-    color: $text-colour;
-    margin-top: 5%;
-    text-align: center;
-    /* font-weight: bold;
-    font-size: medium;
-     */
-    font-style: italic;
-    font-weight: bold;
-    h2 {
-        display: inline-block;
-      }
-  }
-  .logo {
-    display: inline-block;
-    :hover {
-        cursor: pointer;
-        background-image: url("logogreenspin.gif");
-        margin: 1%;
-        /* width: 5%; */
-      }
-  }
-  
-  #about {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
-    color: $text-colour;
-    margin-left: 1%;
-    /* (A) TURN INTO A BOX */
-    padding: 10px;
-    color: $text-colour;
-    font-weight: bold;
-    /* (B) HIDDEN BY DEFAULT */
-    /* OUT OF SCREEN - SET THE POSITION AS YOU WISH */
-    position: fixed;
-    bottom: 5px;
-    left: -999px;
-    /* (C) CSS ANIMATION */
-    transition: all 0.5s;
-    visibility: hidden;
-    .show {
-        left: 5px;
-        visibility: visible;
-      }
-  }
-  
-  .bigsubtitle {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bolder;
-    font-size: 350%;
-    color: $text-colour;
-    font-style: italic;
-    font-weight: bold;
-    /* margin-top: 8%; */
-    margin-left: 2%;
-  }
-  
-  .years {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
-    -moz-column-gap: 50px;
-         column-gap: 50px;
-    margin-left: 2%;
-    p {
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: lighter;
-        font-size: 200%;
-        color: $text-colour;
-        font-style: italic;
-      }
-    img {
-        max-width: 300px;
-        max-height: 300px;
-        cursor: pointer;
-    }
-    words {
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 300;
-        font-size: 50%;
-        color: $text-colour;
-        font-style: normal;
-    }
-  }
-  
-  .image-list {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0 auto;
-    text-align: center;
-    max-width: 1500px;
-    padding: 0;
-    // photo
-    li {
-        display: inline-block;
-        width: 450px;
-        margin: 0 5px 30px;
-        a {
-            display: block;
-            text-decoration: none;
-            background-size: cover;
-            background-repeat: no-repeat;
-            height: 354.44px;
-            margin: 0;
-            margin-top: 20px;
-            padding: 0;
-            border-radius: 5px;
-          }
-    }
-    // title
-    .details {
-        margin-top: 15px;
-        h3 {
-            display: block;
-            font-size: 20px;
-            margin: 0 0 3px 0;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            font-weight: bold;
-            a {
-                color: $text-colour;
-                text-decoration: none;
-              }
-          }
-        .image-date {
-            display: block;
-            color: $text-colour;
-            font-size: 15px;
-            font-weight: normal;
-            margin: 0;
-        }
-      }
-  }
-
-  
-  hr {
-    width: 96%;
-    height: 4px;
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-top: 3%;
-    background-color: $text-colour;
-  }
-  
-  /* menu section */
-  /* .menu{
-    display:flex;
-    margin-top: 3%;
-    gap: 10px;
-  }
-  .wrap-collabsible {
-    margin-bottom: 1.2rem 0;
-    padding: 20px; 
-    width: 50%;
-  } */
-  input[type=checkbox] {
-    display: none;
-  }
-  
-  .lbl-toggle {
-    display: block;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 150%;
-    text-align: center;
-    font-style: italic;
-    padding: 1rem;
-    color: $text-colour;
+// front page name
+.namefront {
+  margin-top: 0%;
+  margin-left: 1%;
+  position: absolute;
+  top: 53%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: medium;
+  :hover{
+    text-decoration: none;
     cursor: pointer;
-    border-radius: 7px;
-    transition: all 0.25s ease-out;
-    :hover {
-        color: $text-colour;
-      }
-    ::before {
-        content: " ";
-        display: inline-block;
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        border-left: 5px solid currentColor;
-        vertical-align: middle;
-        margin-right: 0.7rem;
-        transform: translateY(-2px);
-        transition: transform 0.2s ease-out;
-    }
   }
-  
-  .toggle:checked + .lbl-toggle::before {
-    transform: rotate(90deg) translateX(-3px);
-  }
-  
-  .collapsible-content {
-    max-height: 0px;
-    overflow: hidden;
-    transition: max-height 0.25s ease-in-out;
-  }
-  
-  .toggle:checked + .lbl-toggle + .collapsible-content {
-    max-height: 100vh;
-  }
-  
-  .toggle:checked + .lbl-toggle {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-  
-  .collapsible-content .content-inner {
-    /* background: rgba(250, 224, 66, .2);
-    border-bottom: 1px solid rgba(250, 224, 66, .45);
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px; */
-    padding: 0.5rem 1rem;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-right: -100%;
-  }
-  
-  /* USEFUL NEW MENU */
-  .btn {
-    /* margin-top: 3%; */
-    margin-left: 2%;
-    background-color: $text-colour;
-    :hover {
-        background-color: $text-colour;
-      }
-  }
-  
-  p a {
-    color: $text-colour;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
-h1 {
-  font-family: Helvetica;
-  font-size: 4em;
-  color: $text-colour;
 }
 
-// Typing style
-.typing {
-    position: relative;
-    &::after {
-        content: "|";
-        position: absolute;
-        right: 0;
-        width: 100%;
-        color: $caret-color;
-        background: $bg;
-        animation: typing $animation-time steps($text-length) forwards, caret 1s infinite;
-    }
+// homepage body
+body{
+  background-color: $black;
+  width: 100%;
+  margin: 0;
+  padding:0;
+  overflow:hidden;
 }
-  // Animation
-  @keyframes typing {
-      to { width: 0 }
+
+// header line
+.header{
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  left: 0px;
+  top: -20px;
+  background: $beige;
+}
+
+// vertical lines
+.vertical{
+  position: absolute;
+  top: 70px;
+  width: 170px;
+  border: 2px solid $beige;
+  transform: rotate(90deg);
+}
+
+// name in top left hand corner
+.name{
+  margin-top: 2%;
+  margin-left: 1%;
+  position: absolute;
+  top: 0%;
+  left: 1%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  a{
+    color: $white;
+    text-decoration: none;
+    :hover{
+      color: $green;
+    }
   }
-  @keyframes caret {
-      50% { color: transparent }
+}
+
+// styling name on hover
+a{
+  :link {
+    text-decoration: none;
+    color: $green;
+    }
+  :visited {
+    text-decoration: none;
+    color: $green;
   }
+  :hover {
+    text-decoration: none;
+    color: $green;
+    }
+  :active {
+    text-decoration: none;
+    color: $green;
+  }
+}
+
+// logo in top right hand corner
+.rightlogo{
+  position: absolute;
+  width: 175px;
+  height: 153px;
+  right: 2%;
+  top: 30px;
+  :hover{
+    content: url("/assets/green logo.svg");
+    cursor: pointer;
+  }
+}
+
+// about me section
+#aboutme{
+  position: absolute;
+  width: 293px;
+  height: 149px;
+  left: 370px;
+  margin-top: 3.5%;
+
+  font-family: 'Helvetica';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: right;
+  text-transform: uppercase;
+
+  color: $white;
+}
+
+// contact me section
+#contactme{
+  position: absolute;
+  width: 293px;
+  height: 149px;
+  left: 670px;
+  margin-top: 3.5%;
+
+  font-family: 'Helvetica';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: right;
+  text-transform: uppercase;
+  a{
+    color: $white;
+    text-decoration: none;
+  }
+  p{
+    :hover{
+      color: $green;
+    }
+  }
+}
+
+// cv
+#cv{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  padding:0;
+  margin-top: 3%;
+  max-width: 37%;
+  max-height: auto;
+  height: auto;
+}
+
+// typing "my portfolio"
+// .typing{
+//   position: absolute;
+//   width: 800px;
+//   height: 736px;
+//   right: 5%;
+//   top: 164px;
+
+//   font-family: 'Helvetica';
+//   font-style: normal;
+//   font-weight: 700;
+//   font-size: 200px;
+//   line-height: 200px;
+//   text-align: right;
+
+//   color: #FFFFFF;
+// }
+
+// portfolio animation
+.my_portfolio{
+  @include flexCentre();
+  max-width:92%;
+  height:auto;
+}
+
+// animations
+.colours{
+  position: absolute;
+  width: 286px;
+  height: 155px;
+  left: 50px;
+  top: 600px;
+
+  font-family: 'Helvetica';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 31px;
+  text-transform: uppercase;
+
+  color: $black;
+}
+
+// arrow line
+.arrow{
+  position: absolute;
+  width: 120px;
+  height: 0px;
+  right: 1.6%;
+  top: 700px;
+  border: 2.2px dashed $beige;
+  transform: matrix(0.7, 0.71, -0.72, 0.7, 0, 0);
+  z-index: 2;
+}
+
+// arrow head
+.arrowhead{
+  position: absolute;
+  width: 60px;
+  height: 0px;
+  right: 0.7%;
+  top: 710px;
+
+  border: 2.2px dashed $beige;
+}

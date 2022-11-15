@@ -1,44 +1,11 @@
-/* @inherit */
+/* @inherit may be useful*/
 .centrelogo {
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 100%;
   height: auto;
-}
-
-.name {
-  margin-top: 0%;
-  margin-left: 1%;
-  position: absolute;
-  top: 0%;
-  left: 1%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: medium;
-  color: #ffffff;
-}
-.name h3 {
-  color: #ffffff;
-}
-.name h3 :hover {
-  color: #5d6b62;
-}
-
-a :link {
-  text-decoration: none;
-  color: #ffffff;
-}
-a :visited {
-  text-decoration: none;
-  color: #ffffff;
-}
-a :hover {
-  text-decoration: none;
-  color: #5d6b62;
-}
-a :active {
-  text-decoration: none;
-  color: #5d6b62;
+  top: 30%;
 }
 
 .namefront {
@@ -50,276 +17,170 @@ a :active {
   font-weight: bold;
   font-size: medium;
 }
-
-.subtitles {
-  font-family: Arial, Helvetica, sans-serif;
-  /* font-weight: bold; */
-  font-size: medium;
-  color: #ffffff;
-  margin-top: 5%;
-  text-align: center;
-  /* font-weight: bold;
-  font-size: medium;
-   */
-  font-style: italic;
-  font-weight: bold;
-}
-.subtitles h2 {
-  display: inline-block;
-}
-
-.logo {
-  display: inline-block;
-}
-.logo :hover {
-  cursor: pointer;
-  background-image: url("logogreenspin.gif");
-  margin: 1%;
-  /* width: 5%; */
-}
-
-#about {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: medium;
-  color: #ffffff;
-  margin-left: 1%;
-  /* (A) TURN INTO A BOX */
-  padding: 10px;
-  color: #ffffff;
-  font-weight: bold;
-  /* (B) HIDDEN BY DEFAULT */
-  /* OUT OF SCREEN - SET THE POSITION AS YOU WISH */
-  position: fixed;
-  bottom: 5px;
-  left: -999px;
-  /* (C) CSS ANIMATION */
-  transition: all 0.5s;
-  visibility: hidden;
-}
-#about .show {
-  left: 5px;
-  visibility: visible;
-}
-
-.bigsubtitle {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bolder;
-  font-size: 350%;
-  color: #ffffff;
-  font-style: italic;
-  font-weight: bold;
-  /* margin-top: 8%; */
-  margin-left: 2%;
-}
-
-.years {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
-  -moz-column-gap: 50px;
-  column-gap: 50px;
-  margin-left: 2%;
-}
-.years p {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: lighter;
-  font-size: 200%;
-  color: #ffffff;
-  font-style: italic;
-}
-.years img {
-  max-width: 300px;
-  max-height: 300px;
-  cursor: pointer;
-}
-.years words {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 300;
-  font-size: 50%;
-  color: #ffffff;
-  font-style: normal;
-}
-
-.image-list {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0 auto;
-  text-align: center;
-  max-width: 1500px;
-  padding: 0;
-}
-.image-list li {
-  display: inline-block;
-  width: 450px;
-  margin: 0 5px 30px;
-}
-.image-list li a {
-  display: block;
+.namefront :hover {
   text-decoration: none;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 354.44px;
-  margin: 0;
-  margin-top: 20px;
-  padding: 0;
-  border-radius: 5px;
-}
-.image-list .details {
-  margin-top: 15px;
-}
-.image-list .details h3 {
-  display: block;
-  font-size: 20px;
-  margin: 0 0 3px 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-weight: bold;
-}
-.image-list .details h3 a {
-  color: #ffffff;
-  text-decoration: none;
-}
-.image-list .details .image-date {
-  display: block;
-  color: #ffffff;
-  font-size: 15px;
-  font-weight: normal;
-  margin: 0;
-}
-
-hr {
-  width: 96%;
-  height: 4px;
-  margin-left: 2%;
-  margin-right: 2%;
-  margin-top: 3%;
-  background-color: #ffffff;
-}
-
-/* menu section */
-/* .menu{
-  display:flex;
-  margin-top: 3%;
-  gap: 10px;
-}
-.wrap-collabsible {
-  margin-bottom: 1.2rem 0;
-  padding: 20px; 
-  width: 50%;
-} */
-input[type=checkbox] {
-  display: none;
-}
-
-.lbl-toggle {
-  display: block;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 150%;
-  text-align: center;
-  font-style: italic;
-  padding: 1rem;
-  color: #ffffff;
   cursor: pointer;
-  border-radius: 7px;
-  transition: all 0.25s ease-out;
-}
-.lbl-toggle :hover {
-  color: #ffffff;
-}
-.lbl-toggle ::before {
-  content: " ";
-  display: inline-block;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 5px solid currentColor;
-  vertical-align: middle;
-  margin-right: 0.7rem;
-  transform: translateY(-2px);
-  transition: transform 0.2s ease-out;
 }
 
-.toggle:checked + .lbl-toggle::before {
-  transform: rotate(90deg) translateX(-3px);
-}
-
-.collapsible-content {
-  max-height: 0px;
-  overflow: hidden;
-  transition: max-height 0.25s ease-in-out;
-}
-
-.toggle:checked + .lbl-toggle + .collapsible-content {
-  max-height: 100vh;
-}
-
-.toggle:checked + .lbl-toggle {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.collapsible-content .content-inner {
-  /* background: rgba(250, 224, 66, .2);
-  border-bottom: 1px solid rgba(250, 224, 66, .45);
-  border-bottom-left-radius: 7px;
-  border-bottom-right-radius: 7px; */
-  padding: 0.5rem 1rem;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-right: -100%;
-}
-
-/* USEFUL NEW MENU */
-.btn {
-  /* margin-top: 3%; */
-  margin-left: 2%;
-  background-color: #ffffff;
-}
-.btn :hover {
-  background-color: #ffffff;
-}
-
-p a {
-  color: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-h1 {
-  font-family: Helvetica;
-  font-size: 4em;
-  color: #ffffff;
-}
-
-.typing {
-  position: relative;
-}
-.typing::after {
-  content: "|";
-  position: absolute;
-  right: 0;
+body {
+  background-color: #1d1d1b;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  left: 0px;
+  top: -20px;
+  background: #CBBBA0;
+}
+
+.vertical {
+  position: absolute;
+  top: 70px;
+  width: 170px;
+  border: 2px solid #CBBBA0;
+  transform: rotate(90deg);
+}
+
+.name {
+  margin-top: 2%;
+  margin-left: 1%;
+  position: absolute;
+  top: 0%;
+  left: 1%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+}
+.name a {
   color: #ffffff;
-  background: #1d1d1b;
-  -webkit-animation: typing 4s steps(23) forwards, caret 1s infinite;
-          animation: typing 4s steps(23) forwards, caret 1s infinite;
+  text-decoration: none;
+}
+.name a :hover {
+  color: #5C6C63;
 }
 
-@-webkit-keyframes typing {
-  to {
-    width: 0;
-  }
+a :link {
+  text-decoration: none;
+  color: #5C6C63;
+}
+a :visited {
+  text-decoration: none;
+  color: #5C6C63;
+}
+a :hover {
+  text-decoration: none;
+  color: #5C6C63;
+}
+a :active {
+  text-decoration: none;
+  color: #5C6C63;
 }
 
-@keyframes typing {
-  to {
-    width: 0;
-  }
+.rightlogo {
+  position: absolute;
+  width: 175px;
+  height: 153px;
+  right: 2%;
+  top: 30px;
 }
-@-webkit-keyframes caret {
-  50% {
-    color: transparent;
-  }
+.rightlogo :hover {
+  content: url("/assets/green logo.svg");
+  cursor: pointer;
 }
-@keyframes caret {
-  50% {
-    color: transparent;
-  }
+
+#aboutme {
+  position: absolute;
+  width: 293px;
+  height: 149px;
+  left: 370px;
+  margin-top: 3.5%;
+  font-family: "Helvetica";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: right;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+#contactme {
+  position: absolute;
+  width: 293px;
+  height: 149px;
+  left: 670px;
+  margin-top: 3.5%;
+  font-family: "Helvetica";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: right;
+  text-transform: uppercase;
+}
+#contactme a {
+  color: #ffffff;
+  text-decoration: none;
+}
+#contactme p :hover {
+  color: #5C6C63;
+}
+
+#cv {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  margin-top: 3%;
+  max-width: 37%;
+  max-height: auto;
+  height: auto;
+}
+
+.my_portfolio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 92%;
+  height: auto;
+}
+
+.colours {
+  position: absolute;
+  width: 286px;
+  height: 155px;
+  left: 50px;
+  top: 600px;
+  font-family: "Helvetica";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 31px;
+  text-transform: uppercase;
+  color: #1d1d1b;
+}
+
+.arrow {
+  position: absolute;
+  width: 120px;
+  height: 0px;
+  right: 1.6%;
+  top: 700px;
+  border: 2.2px dashed #CBBBA0;
+  transform: matrix(0.7, 0.71, -0.72, 0.7, 0, 0);
+  z-index: 2;
+}
+
+.arrowhead {
+  position: absolute;
+  width: 60px;
+  height: 0px;
+  right: 0.7%;
+  top: 710px;
+  border: 2.2px dashed #CBBBA0;
 }/*# sourceMappingURL=styles.css.map */
