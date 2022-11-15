@@ -1,3 +1,4 @@
+/* @inherit */
 .centrelogo {
   display: flex;
   align-items: center;
@@ -19,8 +20,7 @@
 .name h3 {
   color: #ffffff;
 }
-.name :hover {
-  text-decoration: none;
+.name h3 :hover {
   color: #5d6b62;
 }
 
@@ -273,8 +273,7 @@ input[type=checkbox] {
   margin-left: 2%;
   background-color: #ffffff;
 }
-
-.btn:hover {
+.btn :hover {
   background-color: #ffffff;
 }
 
@@ -283,13 +282,44 @@ p a {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* 
-color: #ffffff; font-family: Arial, Helvetica, sans-serif; */
-/* .navbar-brand {
-  width:1000px;
-  font-size: 24px;
+h1 {
+  font-family: Helvetica;
+  font-size: 4em;
+  color: #ffffff;
 }
-.navbar-brand logo img {
-  height: 20px;
-  float: right;
-} */ /*# sourceMappingURL=styles.css.map *//*# sourceMappingURL=styles.css.map */
+
+.typing {
+  position: relative;
+}
+.typing::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  color: #ffffff;
+  background: #1d1d1b;
+  -webkit-animation: typing 4s steps(23) forwards, caret 1s infinite;
+          animation: typing 4s steps(23) forwards, caret 1s infinite;
+}
+
+@-webkit-keyframes typing {
+  to {
+    width: 0;
+  }
+}
+
+@keyframes typing {
+  to {
+    width: 0;
+  }
+}
+@-webkit-keyframes caret {
+  50% {
+    color: transparent;
+  }
+}
+@keyframes caret {
+  50% {
+    color: transparent;
+  }
+}/*# sourceMappingURL=styles.css.map */
