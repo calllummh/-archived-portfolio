@@ -51,8 +51,8 @@ body{
 // vertical lines
 .vertical{
   position: absolute;
-  top: 70px;
-  width: 170px;
+  top: 50px;
+  width: 128px;
   border: 2px solid $beige;
   transform: rotate(90deg);
 }
@@ -98,8 +98,8 @@ a{
 // logo in top right hand corner
 .rightlogo{
   position: absolute;
-  width: 175px;
-  height: 153px;
+  width: 125px;
+  height: 113px;
   right: 2%;
   top: 30px;
   :hover{
@@ -113,14 +113,14 @@ a{
   position: absolute;
   width: 293px;
   height: 149px;
-  left: 370px;
+  left: 420px;
   margin-top: 3.5%;
 
   font-family: 'Helvetica';
   font-style: italic;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 14px;
+  line-height: 18px;
   text-align: right;
   text-transform: uppercase;
 
@@ -132,14 +132,14 @@ a{
   position: absolute;
   width: 293px;
   height: 149px;
-  left: 670px;
+  left: 620px;
   margin-top: 3.5%;
 
   font-family: 'Helvetica';
   font-style: italic;
   font-weight: 400;
   font-size: 18px;
-  line-height: 21px;
+  line-height: 23px;
   text-align: right;
   text-transform: uppercase;
   a{
@@ -150,13 +150,6 @@ a{
     :hover{
       color: $green;
     }
-  }
-  h3{
-    margin-top: -6px;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 20px;
-    color: $white;
   }
 }
 

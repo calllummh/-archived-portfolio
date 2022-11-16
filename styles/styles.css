@@ -41,8 +41,8 @@ body {
 
 .vertical {
   position: absolute;
-  top: 70px;
-  width: 170px;
+  top: 50px;
+  width: 128px;
   border: 2px solid #CBBBA0;
   transform: rotate(90deg);
 }
@@ -83,8 +83,8 @@ a :active {
 
 .rightlogo {
   position: absolute;
-  width: 175px;
-  height: 153px;
+  width: 125px;
+  height: 113px;
   right: 2%;
   top: 30px;
 }
@@ -97,13 +97,13 @@ a :active {
   position: absolute;
   width: 293px;
   height: 149px;
-  left: 370px;
+  left: 420px;
   margin-top: 3.5%;
   font-family: "Helvetica";
   font-style: italic;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 14px;
+  line-height: 18px;
   text-align: right;
   text-transform: uppercase;
   color: #ffffff;
@@ -113,13 +113,13 @@ a :active {
   position: absolute;
   width: 293px;
   height: 149px;
-  left: 670px;
+  left: 620px;
   margin-top: 3.5%;
   font-family: "Helvetica";
   font-style: italic;
   font-weight: 400;
   font-size: 18px;
-  line-height: 21px;
+  line-height: 23px;
   text-align: right;
   text-transform: uppercase;
 }
@@ -129,13 +129,6 @@ a :active {
 }
 #contactme p :hover {
   color: #5C6C63;
-}
-#contactme h3 {
-  margin-top: -6px;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 20px;
-  color: #ffffff;
 }
 
 #cv {
